@@ -28,17 +28,19 @@ test_player = save_nba_player_to_dict(random_player)
 #     print('hey')
 test_player = save_nba_player_to_dict(random_player)
 announcement(test_player)
-ans = input('type_the_name')
-if len(ans)!=3:
+user_ans = input('type_the_name')
+test_ans = str(test_player.get('team_id')[0])
+#check ans
+if len(user_ans)!=3:
     print("Please type the 3-letter abreviation of the team:")
-    ans = input('type_the_name')
-elif list(ans) == str(test_player.get('team_id')):
+    user_ans = input('type_the_name')
+elif user_ans == test_ans:
     print('you are right!')
 else:
-    print('you type',ans)
-    print("You type the wrong team, the name of the team is {}".format(test_player.get('team_id')))
-    print(len(ans),type(test_player.get('team_id')))
-    print(str(test_player.get('team_id')))
+    print('you type',user_ans,type(user_ans))
+    print('the ans is ',str(test_ans),len(test_ans))
+    print("You type the wrong team, the name of the team is {}".format(test_ans))
+
 
 
 
