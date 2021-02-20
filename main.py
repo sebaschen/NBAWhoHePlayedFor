@@ -44,6 +44,7 @@ while count <3:
     test_player = preprocess()
     user_ans = get_user_ans()
     test_ans = get_test_ans(test_player)
+    # show player's picture: test_ans
     if len(user_ans) != 3:
         print("Please type the 3-letter abreviation of the team:")
         user_ans = get_user_ans()
